@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        video, canvas { border: 2px solid black; width: 300px; }
+        #processedImage { display: none; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Face Detection App</h1>
+    
+    <video id="video" autoplay></video>
+    <br>
+    <button onclick="captureImage()">Capture Image</button>
+    
+    <br><br>
+    <input type="file" id="fileInput" accept="image/*">
+    
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <h2>Processed Image:</h2>
+    <h3 id="faceCount">Faces detected: 0</h3>  <!-- Ensured this is present -->
+    
+    <img id="processedImage" alt="Processed Image">
+
+    <script src="script.js"></script>
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
+</body>
+</html>
